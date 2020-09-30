@@ -13,5 +13,4 @@ python3 -m venv venv
 pip install -r requirements.txt
 python3 app/run.py
 ```
-
-### Testing
+Once the server is running, visit http://127.0.0.1:5000/ in a browser
