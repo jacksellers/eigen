@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<h2>Documents containing "{{ word }}"</h2>
+<h3><a href='{{ url_for('index') }}'><- Back</a></h3>
+
+<table>
+  <tr>
+    <th>Document</th>
+  </tr>
+  {% for doc in docs %}
+    <tr>
+        <td>{{ doc }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>

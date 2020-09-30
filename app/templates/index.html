@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<h2>Results</h2>
+
+<table>
+  <tr>
+    <th>Word</th>
+    <th>Total occurrences</th>
+    <th>Documents containing the word</th>
+    <th>Sentences containing the word</th>
+  </tr>
+  {% for key, value in od.items() %}
+    <tr>
+        <td>{{ key }}</td>
+        <td>{{ value }}</td>
+        <td><a href='{{ url_for('documents', word=key) }}'>Documents</a></td>
+        <td><a href='{{ url_for('sentences', word=key) }}'>Sentences</a></td>
+    </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>

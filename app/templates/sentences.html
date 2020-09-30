@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<h2>Sentences containing "{{ word }}"</h2>
+<h3><a href='{{ url_for('index') }}'><- Back</a></h3>
+
+<table>
+  <tr>
+    <th>Sentence</th>
+  </tr>
+  {% for match in matches %}
+    <tr>
+        <td>{{ match }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
